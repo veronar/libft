@@ -6,11 +6,9 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 06:55:00 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/20 07:12:11 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/20 09:37:01 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_atoi(char *str)
 {
@@ -21,11 +19,11 @@ int	ft_atoi(char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] >= '\t' && str[i] <= '\r' || str[i] = ' ')
+	while ((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
 		i++;
-	if (str[i] = '-')
+	if (str[i] == '-')
 		sign = -1;
-	if (str[i] = '-' || str[i] = '+')
+	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
 	{
@@ -35,3 +33,27 @@ int	ft_atoi(char *str)
 	result = result * sign;
 	return (result);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int	main(int ac, char **av)
+{
+	int i;
+	int a;
+
+	i = 0;
+	a = 0;
+	if (ac != 2)
+		return 0;
+	else
+	{
+		a = atoi(av[1]);
+		i = ft_atoi(av[1]);
+		printf("You typed: %d", i);
+		printf("\n");
+		printf("Atoi gives: %d", a);
+		printf("\n");
+	}
+	return 0;
+}*/
