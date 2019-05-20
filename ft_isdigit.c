@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:53:09 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/20 11:19:43 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/20 11:21:23 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/20 11:28:52 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if (c >= '0' && c <= '9')
 		return (1);
-	else
+	else 
 		return (0);
 }
 
 /*
 #include <ctype.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 int	main(int ac, char **av)
@@ -34,13 +33,13 @@ int	main(int ac, char **av)
 		return 0;
 	else if (av[1][1] != '\0')
 		return 0;
-	else 
+	else
 	{
-		a = ft_isalpha(av[1][0]);
-		printf("ft_isalpha: %d", a);
+		a = ft_isdigit(av[1][0]);
+		printf("ft_isdigit: %d", a);
 		printf("\n");
-		b = isalpha(av[1][0]);
-		printf("isalpha: %d", b);
+		b = isdigit(av[1][0]);
+		printf("isdigit: %d", b);
 		printf("\n");
 	}
 	return 0;
