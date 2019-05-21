@@ -1,56 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 08:37:45 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/21 12:37:56 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/21 10:01:43 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/21 13:16:36 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
-	char *ptr;
+	size_t 		i;
+	const char 	*csrc;
+	char 		*cdest;
+	char 	temp[len];
 
-	ptr = s;
 	i = 0;
-	if (n == 0)
-		return;
-	while (i < n)
+	csrc = (const char*)src;
+	cdest = (char*)dst;
+	while(i < len)
 	{
-		ptr[i] = 0;
+		temp[i] = csrc[i];
 		i++;
 	}
+	i = 0;
+	while(i < len)
+	{
+		cdest[i] = temp[i];
+		i++;
+	}
+	return(dst);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main () 
-{
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_bzero(str, 2);
-   puts(str);
-
-   printf("\n\n");
-
-	strcpy(str,"This is string.h library function");
-   puts(str);
-
-   bzero(str, 2);
-   puts(str);
-
-
-   return(0);
-}
-*/
