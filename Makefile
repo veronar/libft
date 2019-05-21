@@ -1,7 +1,8 @@
 NAME= ft_atoi.c
 
 all:
-	gcc -c -Wall -Werror -Wextra $(NAME)
+	gcc -c -Wall -Werror -Wextra *.c
+	ar rc libft.a *.o
 
 clean:
 	rm -f *.o

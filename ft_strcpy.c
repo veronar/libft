@@ -1,43 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 06:48:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/21 09:55:04 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/20 13:53:49 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/21 09:53:07 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char *ft_strcpy(char *dst, const char *src)
 {
-	size_t i;
+	int i;
+	char *res = 0;
 
+	*res = *dst;
 	i = 0;
-	while (str[i] != '\0')
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
 		i++;
-	return (i);
+	}
+	dst[i + 1] = '\0';
+	return (res);
 }
+
 /*
-#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 int	main(int ac, char **av)
 {
-	size_t a;
+	char *source;
+	char *dest;
 
-	a = 0;
-	if (ac != 2)
-		return 0;
+	source = av[2];
+	dest = av[1];
+	if (ac != 3)
+		return (0);
 	else 
 	{
-		a = ft_strlen(av[1]);
-		printf("Your string length is: %zu", a);
-		printf("\n");
+		printf("*src = %s", source);
+		printf("*dst = %s", dest);
+		ft_strcpy(dest, source);
+		printf("*src = %s", source);
+		printf("*dst = %s", dest);
 	}
-	return 0;
+	return (0);
 }
 */
