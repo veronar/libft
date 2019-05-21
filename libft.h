@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:10 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/21 09:45:52 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/21 10:58:20 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int		ft_toupper(int c);
 int		ft_atoi(char *str);
 int		ft_isascii(int c);
 char 	*ft_strcpy(char *dst, const char *src);
-
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
