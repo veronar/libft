@@ -6,19 +6,27 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:53:49 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/22 12:05:53 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/22 12:29:03 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strcpy(char *dst, const char *src)
+char *ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (i < len)
 	{
+		if(src[i] == '\0')
+		{
+			while(i < len)
+			{
+				dst[i] = '\0';
+				i++;
+			}
+		}
 		dst[i] = src[i];
 		i++;
 	}
