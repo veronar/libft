@@ -1,43 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 06:48:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/22 11:23:04 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/22 11:35:14 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/22 11:55:29 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strdup(const char *s1)
 {
-	size_t i;
+	char	*dest;
+	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-/*
-#include <stdlib.h>
-#include <stdio.h>
-
-int	main(int ac, char **av)
-{
-	size_t a;
-
-	a = 0;
-	if (ac != 2)
-		return 0;
-	else
+	dest = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if(dest == NULL)
+		return(NULL);
+	while (s1[i] != '\0')
 	{
-		a = ft_strlen(av[1]);
-		printf("Your string length is: %zu", a);
-		printf("\n");
+		dest[i] = s1[i];
+		i++;
 	}
-	return 0;
+	dest[i] = '\0';
+	return(dest);
 }
-*/

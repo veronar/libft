@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:37:45 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/21 12:37:56 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/22 11:24:49 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
-	char *ptr;
+	size_t	i;
+	char	*ptr;
 
 	ptr = s;
 	i = 0;

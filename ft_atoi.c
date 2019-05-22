@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 06:55:00 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/22 07:25:40 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/22 11:22:36 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,27 @@ int	ft_atoi(const char *str)
 }
 
 /*
-#include <stdio.h>
-#include <stdlib.h>
+**#include <stdio.h>
+**#include <stdlib.h>
 
-int	main(int ac, char **av)
-{
-	int i;
-	int a;
+**int	main(int ac, char **av)
+**{
+**int i;
+**	int a;
 
-	i = 0;
-	a = 0;
-	if (ac != 2)
-		return 0;
-	else
-	{
-		a = atoi(av[1]);
-		i = ft_atoi(av[1]);
-		printf("You typed: %d", i);
-		printf("\n");
-		printf("Atoi gives: %d", a);
-		printf("\n");
-	}
-	return 0;
-}*/
+**	i = 0;
+**	a = 0;
+**	if (ac != 2)
+**		return 0;
+**	else
+**	{
+**		a = atoi(av[1]);
+**		i = ft_atoi(av[1]);
+**		printf("You typed: %d", i);
+**		printf("\n");
+**		printf("Atoi gives: %d", a);
+**		printf("\n");
+**	}
+**	return 0;
+**}
+*/
