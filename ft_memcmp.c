@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:21:20 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/21 14:50:10 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/22 07:27:08 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_strcmp(const void *s1, const void *s2)
 {
-	return(ft_memcmp(s1, s2, (ft_strlen(s1)+1));
+	return(ft_memcmp(s1, s2, (ft_strlen(s1)+1)));
 }

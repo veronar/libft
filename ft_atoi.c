@@ -6,13 +6,13 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 06:55:00 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/21 09:53:33 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/22 07:25:40 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int sign;
@@ -35,6 +35,7 @@ int	ft_atoi(char *str)
 	result = result * sign;
 	return (result);
 }
+
 /*
 #include <stdio.h>
 #include <stdlib.h>
