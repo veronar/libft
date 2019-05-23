@@ -6,25 +6,29 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:31:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/22 13:21:58 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/23 09:22:41 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-char	*ft_strcat(char *s1, const char *s2)
-{
-	size_t 	i;
-	size_t	j;
 
-	i = ft_strlen(s1);
-	j = 0;
-	while (s2[j] != '\0')
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t 	srclen;
+	size_t	dstlen;
+	size_t remain;
+
+	srclen = ft_strlen(src);
+	dstlen = ft_strnlen(dst, dstsize);
+	remain = dstsize - dstlen;
+	if(dstlen == dstsize)
+		return (dstsize + srclen);
+	if(srclen < remain)
+		ft_memcpy((dst + dstlen), src, srclen + 1);
+	else
 	{
-		s1[i] = s2[j];
-		i++;
-		j++;
+		ft_memcpy((dst + dstlen), src, dstsize - 1);
+		dst[dstlen + dstsize - 1] = '\0';
 	}
-	s1[i] = '\0';
-	return (s1);
+	return(srclen + dstlen);
 }
