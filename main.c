@@ -11,9 +11,9 @@ int main () {
    ft_strcpy(src,  "This is source");
    ft_strcpy(dest, "This is destination");
 
-   printf("%zu", strlcat(dest, src, 35));
+   printf("%s", strchr(dest, 't'));
 
-   //printf("Final destination string : |%zu|", dest);
+  // printf("Final destination string : |%s|", dest);
    
    return(0);
 }
