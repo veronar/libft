@@ -11,7 +11,7 @@ int main () {
    ft_strcpy(src,  "This is source");
    ft_strcpy(dest, "This is destination");
 
-   printf("%s", strchr(dest, 't'));
+   printf("%s", ft_strrchr(dest, 's'));
 
   // printf("Final destination string : |%s|", dest);
    
