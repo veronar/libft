@@ -6,13 +6,13 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:21:20 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/23 11:39:03 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/23 12:08:13 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const void *s1, const void *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	return(ft_memcmp(s1, s2, (ft_strlen(s1)+1)));
 }

@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:21:20 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/23 11:39:15 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/23 11:52:41 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if(str1[i] == str2[i])
 			i++;
 		else
-			return(*str1 - *str2);
+			return((int)(*str1 - *str2));
 	}
 	return (0);
 }
