@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 08:38:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/23 08:51:02 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/24 13:39:58 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strnlen(const char *s, size_t maxlen)
 	size_t i;
 
 	i = 0;
-	while((s[i] != '\0') && (i <= maxlen))
+	while((s[i] != '\0') && (i < maxlen))
 		i++;
 	return (i);
 }
