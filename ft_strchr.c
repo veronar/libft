@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:29:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/23 10:22:49 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/23 14:17:51 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ char *ft_strchr(const char *s, int c)
 	while(s[i] != '\0')
 	{
 		if(s[i] == chr)
-			return ((char*)s+i);
+			return ((char*)s + i);
 		i++;
 	}
+	if(chr == '\0')
+		return((char*)s + i);
 	return (NULL);	
 }
