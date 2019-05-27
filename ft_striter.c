@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 07:17:40 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/27 08:27:32 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/27 08:48:52 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/27 09:17:23 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	unsigned char	chr;
-	size_t 			i;
-	char 			*ptr;
+	int	i;
 
-	ptr = b;
-	chr = (unsigned char)c;
 	i = 0;
-	while (i < len)
+	if (s == NULL || f == NULL)
+		return ((void)NULL);
+	while (s[i] != '\0')
 	{
-		*ptr++ = chr;
+		f(&s[i]);
 		i++;
 	}
-	return (b);
 }
