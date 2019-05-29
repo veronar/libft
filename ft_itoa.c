@@ -6,15 +6,15 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:41:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/29 13:18:07 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/29 15:22:53 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_itoa_len(int n)
+static size_t	ft_itoa_len(int n)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	if (n == 0)
@@ -31,26 +31,27 @@ static int	ft_itoa_len(int n)
 
 char	*ft_itoa(int n)
 {
-	int		len;
+	size_t		len;
 	char	*result;
-	int		neg;
+	size_t		neg;
+	size_t		sign;
 
 	len = ft_itoa_len(n);
 	neg = 0;
+	sign = 1;
 	if (!(result = (char*)ft_memalloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	result[len] = '\0';
-	if (n == -2147483648)
-	   return (result = "-2147483648");	
 	if (n < 0)
 	{
 		result[0] = '-';
 		neg = 1;
+		sign = -1;
 	}
 	while (len > neg)
 	{
 		len--;
-		result[len] = (n % 10) + 48;
+		result[len] = '0' + (n % 10) * sign;
 		n = n / 10;
 	}
 	return (result);
