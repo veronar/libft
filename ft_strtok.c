@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strtok.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 06:55:00 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/29 08:11:48 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/28 08:48:17 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/28 08:50:53 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strtok(char *str, const char *delim)
 {
-	int i;
-	int sign;
-	int result;
+    static char	*p;
 
-	i = 0;
-	sign = 1;
-	result = 0;
-	while ((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
-	{
-		result = (result * 10) + (str[i] - 48);
-		i++;
-	}
-	result = result * sign;
-	return (result);
+	p = 0;
+    if (str)
+        p = str;
+    else if (!p)
+        return (0);
+    str = p + ft_strspn(p, delim);
+    p = str + ft_strcspn(str, delim);
+    if (p == str)
+        return (p = 0);
+    p = *p ? *p = 0, p + 1 : 0;
+    return (str);
 }
