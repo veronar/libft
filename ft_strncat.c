@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:31:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/24 13:32:18 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:58:26 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	size_t 	i;
+	size_t	i;
 	size_t	j;
 
 	i = ft_strlen(s1);
 	j = 0;
-	while (s2[j] !=  '\0')
+	while (s2[j] != '\0')
 	{
 		if (n > 0)
 		{
@@ -28,8 +28,8 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 			j++;
 			n--;
 		}
-		else 
-			break;
+		else
+			break ;
 	}
 	s1[i] = '\0';
 	return (s1);

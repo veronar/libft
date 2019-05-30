@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:44:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/27 10:51:13 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:08:50 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ int	ft_strequ(char const *s1, char const *s2)
 		return (0);
 	if (ft_strcmp(s1, s2) == 0)
 		return (1);
-	else 
+	else
 		return (0);
 }

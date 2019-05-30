@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 12:06:35 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/30 12:22:25 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/30 09:46:41 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/30 12:27:21 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr(char const *s)
+/*t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	int	i;
+	
 
-	i = 0;
-	if (s == NULL)
-		return ;
-	while (s[i] != '\0')
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
-}
+}*/

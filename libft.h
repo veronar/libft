@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:10 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/30 09:36:35 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:27:05 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,14 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+/*t_list	*ft_lstnew(void const *content, size_t conect_size);
 
 
-
+typdef struct	s_list;
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list
+*/
 #endif

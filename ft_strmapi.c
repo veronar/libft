@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:37:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/27 10:43:14 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:08:12 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (s == NULL || f == NULL)
 		return (NULL);
 	if (!(mem = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-			return (NULL);
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		mem[i] = s[i];

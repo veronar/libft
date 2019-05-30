@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:35:17 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/29 15:40:39 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:23:10 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr_fd(char const *s, int fd)
 
 	i = 0;
 	if (s == NULL)
-		return;
+		return ;
 	while (s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);

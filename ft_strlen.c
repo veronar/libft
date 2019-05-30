@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 06:48:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/22 11:23:04 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:54:16 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*
-#include <stdlib.h>
-#include <stdio.h>
-
-int	main(int ac, char **av)
-{
-	size_t a;
-
-	a = 0;
-	if (ac != 2)
-		return 0;
-	else
-	{
-		a = ft_strlen(av[1]);
-		printf("Your string length is: %zu", a);
-		printf("\n");
-	}
-	return 0;
-}
-*/

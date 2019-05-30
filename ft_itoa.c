@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:41:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/29 15:26:06 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:21:33 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ static size_t	ft_itoa_len(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	size_t		len;
-	char	*result;
+	char		*result;
 	size_t		neg;
 	size_t		sign;
 

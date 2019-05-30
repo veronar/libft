@@ -6,15 +6,15 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:31:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/22 13:21:58 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:56:26 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 char	*ft_strcat(char *s1, const char *s2)
 {
-	size_t 	i;
+	size_t	i;
 	size_t	j;
 
 	i = ft_strlen(s1);

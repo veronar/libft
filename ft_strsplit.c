@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:51:03 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/29 10:40:10 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:28:54 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static size_t	ft_countwords(const char *str, char c)
 {
 	size_t	i;
 	size_t	count;
-	
+
 	i = 0;
 	count = 0;
 	while (str[i])
@@ -28,39 +28,34 @@ static size_t	ft_countwords(const char *str, char c)
 		while (str[i] != c && str[i] != '\0')
 			i++;
 	}
-	return (count);	
+	return (count);
 }
 
-char	**ft_strsplit(const char *s, char c)
+char			**ft_strsplit(const char *s, char c)
 {
-	size_t	words;
 	size_t	k;
 	char	**ret;
 	size_t	i;
 	size_t	x;
-	char 	*str;
 
 	i = 0;
 	x = 0;
-	str = (char*)s;
 	if (s == NULL || c == 0)
 		return (NULL);
-	words = ft_countwords(s, c);
-	if (!(ret = (char**)ft_memalloc(sizeof(char*) * (words + 1))))
+	if (!(ret = (char**)ft_memalloc(sizeof(char*) * (ft_countwords(s, c) + 1))))
 		return (NULL);
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		if (str[i] == c)
+		if (s[i] == c)
 			i++;
-		else 
+		else
 		{
 			k = i;
-			while (str[i] != c && str[i] != '\0')
+			while (s[i] != c && s[i] != '\0')
 				i++;
-			ret[x] = ft_strsub(str, k, (i - k));
+			ret[x] = ft_strsub(s, k, (i - k));
 			x++;
-		}	
+		}
 	}
-	ret[x] = (NULL);
-	return (ret);		
+	return (ret);
 }

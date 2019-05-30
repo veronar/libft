@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:31:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/24 14:59:20 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:58:55 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t 	srclen;
+	size_t	srclen;
 	size_t	dstlen;
 
 	srclen = ft_strlen(src);
@@ -29,5 +29,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[dstsize - 1] = '\0';
 	}
 	return (srclen + dstlen);
-	
 }
