@@ -6,13 +6,14 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:10 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/29 15:44:34 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 09:11:21 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <string.h>
 # include <unistd.h>
 
 void	ft_bzero(void *s, size_t n);
