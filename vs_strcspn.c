@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strspn.c                                        :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 08:37:22 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/28 08:44:04 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/28 08:42:20 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/30 09:35:43 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strspn(const char *s, const char *charset)
+size_t	vs_strcspn(const char *s, const char *charset)
 {
 	size_t	ret;
 
 	ret = 0;
-	while (*s && ft_strchr(charset, *s++))
-		ret++;
+	while (*s)
+	{
+		if (ft_strchr(charset, *s))
+			return (ret);
+		else
+			s++;
+   			ret++;
+	}
 	return (ret);
 }

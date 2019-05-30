@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:10 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/30 09:11:21 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/05/30 09:36:35 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
-size_t	ft_strspn(const char *s, const char *charset);
-size_t	ft_strcspn(const char *s, const char *charset);
+size_t	vs_strspn(const char *s, const char *charset);
+size_t	vs_strcspn(const char *s, const char *charset);
+char	*vs_strtok(char *str, const char *delim);
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putnbr(int n);

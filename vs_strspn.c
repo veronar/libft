@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtok.c                                        :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 08:48:17 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/28 08:50:53 by vesingh          ###   ########.fr       */
+/*   Created: 2019/05/28 08:37:22 by vesingh           #+#    #+#             */
+/*   Updated: 2019/05/30 09:36:03 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtok(char *str, const char *delim)
+size_t	vs_strspn(const char *s, const char *charset)
 {
-    static char	*p;
+	size_t	ret;
 
-	p = 0;
-    if (str)
-        p = str;
-    else if (!p)
-        return (0);
-    str = p + ft_strspn(p, delim);
-    p = str + ft_strcspn(str, delim);
-    if (p == str)
-        return (p = 0);
-    p = *p ? *p = 0, p + 1 : 0;
-    return (str);
+	ret = 0;
+	while (*s && ft_strchr(charset, *s++))
+		ret++;
+	return (ret);
 }
