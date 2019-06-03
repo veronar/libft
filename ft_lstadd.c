@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:44:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/31 08:55:17 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/06/03 15:10:49 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_lstadd(t_list **alst, t_list *new)
 {
 	new->next = *alst;
 	*alst = new;
-	return;
+	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:33:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/31 11:36:36 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/06/03 15:11:35 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		tmp = tmp->next;
 		lst = lst->next;
 	}
-	return (result);	
+	return (result);
 }
