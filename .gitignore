@@ -3,3 +3,4 @@
 *.swp
 libft.a
 *.o
+main.c
