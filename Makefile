@@ -6,7 +6,7 @@
 #    By: vesingh <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/06/07 12:22:29 by vesingh          ###   ########.fr        #
+#    Updated: 2019/06/10 06:53:57 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ OBJ = $(SRC:.c=.o)
 INCL = libft.h
 
 all: $(NAME)
+
 $(NAME):
 	gcc -c -Wall -Werror -Wextra $(SRC)
 	ar rc $(NAME) $(OBJ) $(INCL)
