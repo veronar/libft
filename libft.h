@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:59:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/06/03 15:11:41 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/06/20 08:19:13 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,6 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-size_t				vs_strspn(const char *s, const char *charset);
-size_t				vs_strcspn(const char *s, const char *charset);
-char				*vs_strtok(char *str, const char *delim);
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putnbr(int n);
@@ -88,5 +85,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_swap(int *a, int *b);
+char				*ft_strrev(char *str);
+void				ft_print_bits(unsigned char octet);
+unsigned char		ft_swap_bits(unsigned char octet);
 
 #endif
