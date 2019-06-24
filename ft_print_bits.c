@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/20 07:21:01 by vesingh           #+#    #+#             */
-/*   Updated: 2019/06/20 07:35:32 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/06/20 09:08:37 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_print_bits(unsigned char octet)
 	while (i >= 0)
 	{
 		c = tab[i] + 48;
-		write(1, &c, 1);
+		ft_putchar(c);
 		i--;
 	}
 }

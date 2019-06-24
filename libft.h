@@ -6,7 +6,7 @@
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:59:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/06/20 08:19:13 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/06/20 13:52:38 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,8 @@ void				ft_swap(int *a, int *b);
 char				*ft_strrev(char *str);
 void				ft_print_bits(unsigned char octet);
 unsigned char		ft_swap_bits(unsigned char octet);
+size_t				ft_countwords(const char *str, char c);
+char                *ft_strdupdel(char **str);
+int                 ft_check_newline(char *str);
 
 #endif

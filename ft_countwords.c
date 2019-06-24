@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 08:51:03 by vesingh           #+#    #+#             */
-/*   Updated: 2019/06/20 14:03:35 by vesingh          ###   ########.fr       */
+/*   Created: 2019/06/20 13:48:23 by vesingh           #+#    #+#             */
+/*   Updated: 2019/06/20 14:03:52 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**ft_strsplit(const char *s, char c)
+size_t	ft_countwords(const char *str, char c)
 {
-	size_t	k;
-	char	**ret;
 	size_t	i;
-	size_t	x;
+	size_t	count;
 
 	i = 0;
-	x = 0;
-	if (s == NULL || c == 0)
-		return (NULL);
-	if (!(ret = (char**)ft_memalloc(sizeof(char*) * (ft_countwords(s, c) + 1))))
-		return (NULL);
-	while (s[i] != '\0')
+	count = 0;
+	while (str[i])
 	{
-		if (s[i] == c)
+		while (str[i] == c)
 			i++;
-		else
-		{
-			k = i;
-			while (s[i] != c && s[i] != '\0')
-				i++;
-			ret[x] = ft_strsub(s, k, (i - k));
-			x++;
-		}
+		if (str[i] != c && str[i] != '\0')
+			count++;
+		while (str[i] != c && str[i] != '\0')
+			i++;
 	}
-	return (ret);
+	return (count);
 }
