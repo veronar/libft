@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:51:03 by vesingh           #+#    #+#             */
-/*   Updated: 2019/06/20 14:03:35 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/02 07:51:36 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ char			**ft_strsplit(const char *s, char c)
 			k = i;
 			while (s[i] != c && s[i] != '\0')
 				i++;
-			ret[x] = ft_strsub(s, k, (i - k));
-			x++;
+			ret[x++] = ft_strsub(s, k, (i - k));
 		}
 	}
+	ret[x] = NULL;
 	return (ret);
 }

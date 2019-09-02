@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:59:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/06/20 13:52:38 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 14:50:58 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 8
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef	struct		s_list
 {
@@ -70,6 +72,9 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+size_t				vs_strspn(const char *s, const char *charset);
+size_t				vs_strcspn(const char *s, const char *charset);
+char				*vs_strtok(char *str, const char *delim);
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putnbr(int n);
@@ -85,12 +90,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+char				*ft_strdupdel(char **str);
+char				*ft_strjoinfree(char *s1, char *s2);
+int					get_next_line(const int fd, char **line);
 void				ft_swap(int *a, int *b);
-char				*ft_strrev(char *str);
-void				ft_print_bits(unsigned char octet);
-unsigned char		ft_swap_bits(unsigned char octet);
-size_t				ft_countwords(const char *str, char c);
-char                *ft_strdupdel(char **str);
-int                 ft_check_newline(char *str);
 
 #endif
