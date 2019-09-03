@@ -30,7 +30,7 @@ make re
 
 ## Usage
 
-To use the library  `#include "libft.h"` will need to be added to the list of included libraries & its will need to be in the correct directory.  
+To use the library  `#include "libft.h"` will need to be added to the list of included libraries & will need to be in the correct directory.  
 If additional functions are added to LibFT, the function will need to be prototyped in the `libft.h` file & LibFT will need to be recompiled.
 
 ### Compiling with libft.a
