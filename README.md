@@ -1,4 +1,4 @@
-# ***LibFT***
+# **LibFT**
 
 WeThinkCode_ Core project
 
