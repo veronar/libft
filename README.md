@@ -21,7 +21,7 @@ LibFT is compiled with a `Makefile`; to compile, run the following command:
 ```
 make
 ```
-If edits are made LibFT will need to be recompiled  
+If edits are made to LibFT, it will need to be recompiled  
 To recompile run the following command:
 
 ```
