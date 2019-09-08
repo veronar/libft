@@ -8,7 +8,12 @@ The aim of this project is to code a C library regrouping usual functions that y
 ## Objective
 C programming can be very tedious when one doesn’t have access to those highly useful standard functions. This project makes us take the time to re-write those functions, understand them, and learn to use them. This library will help us for all our future C
 projects.  
-Through this project, we also have the opportunity to expand the list of functions with our own. We should take the time to expand our libft throughout the year.
+Through this project, we also have the opportunity to expand the list of functions with our own. We should take the time to expand our libft throughout the year.  
+
+Allowed functions:
+- write
+- malloc
+- free
 
 ## Installation
 
